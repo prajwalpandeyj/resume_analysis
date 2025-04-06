@@ -20,7 +20,7 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
 echo "Pulling Ollama models..."
-ollama pull qwq:32b
+ollama pull qwen2.5:32b
 ollama pull nomic-embed-text
 
 echo "Installing Python dependencies..."
