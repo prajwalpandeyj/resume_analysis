@@ -62,7 +62,7 @@ def extract_text(file):
 
 def generate_summary(text):
     # Using Ollama instead of Gemini
-    llm = Ollama(model="qwq:32b", temperature=0)
+    llm = Ollama(model="qwen2.5:32b", temperature=0)
 #     prompt = f"""
 # Create a concise professional summary of this resume, optimized for recruiters.
 # Highlight:
@@ -119,7 +119,7 @@ def main():
         #     ["llama2", "mistral", "gemma3:4b", "phi"],
         #     index=0
         # )
-        ollama_model = "qwq:32b"
+        ollama_model = "qwen2.5:32b"
     if uploaded_files:
         current_filenames = [file.name for file in uploaded_files]
         if current_filenames != st.session_state.uploaded_filenames or st.session_state.vectorstore is None:
